@@ -1,0 +1,120 @@
+.in-the-news {
+  h3 {
+    font-weight: 500;
+    color: #a7a7a7;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .in-the-news-content {
+    background-color: white;
+    margin-bottom: 13px;
+    border-radius: 20px;
+    padding: 40px;
+
+    .news-block-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      font-family: 'PT Serif', 'Roboto Slab', Georgia, serif;
+      color: #292929;
+      margin: -20px;
+
+      @media(min-width: 645px) {
+        margin: 0;
+      }
+
+      .news-block {
+        display: block;
+        flex: 1;
+        height: 40px;
+        min-width: 68px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 5px;
+        position: relative;
+
+        &:hover {
+          .tooltip {
+            visibility: visible;
+            display: block;
+            opacity: 1;
+          }
+        }
+
+        .tooltip {
+          position: absolute;
+          visibility: hidden;
+          display: none;
+          background: white;
+          padding: 20px 20px 20px 30px;
+          top: 0;
+          left: calc(50% - 30px);
+          transform: translateY(-100%) translateY(-30px);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          width: 200px;
+          color: #292929;
+          opacity: 0;
+          transition: visibility .1s, opacity .5s linear;
+          border-radius: 5px;
+
+          &:before {
+            content: '◤';
+            display: block;
+            position: absolute;
+            font-size: 25px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15), -1px 0 3px rgba(0, 0, 0, 0.15);
+            bottom: -8px;
+            left: 12px;
+            line-height: 0;
+            margin: 0;
+            padding: 0;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 10px;
+            bottom: 0;
+            height: 10px;
+            width: 30px;
+            background: white;
+            z-index: 1;
+          }
+
+          blockquote {
+            &:before {
+              content: '“';
+              display: inline-block;
+              font-size: 1.5em;
+              line-height: .7em;
+              margin-left: -12px;
+              vertical-align: bottom;
+            }
+
+            &::after {
+              content: '”';
+              display: inline-block;
+              font-size: 1.5em;
+              line-height: .9em;
+              vertical-align: bottom;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1024px) {
+    h3 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

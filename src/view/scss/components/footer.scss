@@ -1,0 +1,49 @@
+footer {
+    text-align: center;
+    font-size: 14px;
+
+    a {
+        color: #7e7e7e;
+        transition: all .3s;
+
+        &:hover {
+            text-decoration: underline;
+            color: black !important;
+        }
+    }
+
+    .alphabet {
+        margin-top: 20px;
+
+        a {
+            padding: 0 3px;
+        }
+    }
+
+    .copyright {
+        color: #a7a7a7;
+    }
+
+    .footer-socials {
+
+        a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background-color: #dedede;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            background-size: 50%;
+            background-position: center;
+            margin: 5px;
+        }
+
+        .facebook-link {
+            background-image: url(/src/img/facebook.svg);
+        }
+
+        .twitter-link {
+            background-image: url(/src/img/twitter.svg);
+        }
+    }
+}
