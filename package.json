@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "npx parcel src/index.html",
+    "build": "npx parcel build src/index.html",
+    "deploy": "sudo netlify deploy -p"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
+    "netlify-cli": "^9.13.0",
+    "parcel": "^2.3.2",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.2"
+  }
+}
